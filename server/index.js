@@ -13,7 +13,7 @@ app.use(bodyParser.json({limit:"30mb", extended:true}));
 app.use(bodyParser.urlencoded({limit:"30mb", extended:true}));
 app.use(cors());
 
-const CONNECTION_URL = 'mongodb+srv://ireebirinr:12Sandii@cluster0.sejqopz.mongodb.net/?retryWrites=true&w=majority'
+const CONNECTION_URL = process.env.MONGO_DB_URL
 const PORT = process.env.PORT || 5000;
 
 
